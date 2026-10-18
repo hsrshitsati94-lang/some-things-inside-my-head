@@ -1,0 +1,27 @@
+/* Individual reading worlds. The artwork stays anchored while the poem scrolls. */
+.reader{--reader-bg:var(--scene-bg,#192321);--reader-muted:#c8ccc1;--reader-rule:#6b736a;width:min(1140px,calc(100% - 56px));height:calc(100dvh - 48px);max-height:calc(100dvh - 48px);isolation:isolate;scrollbar-gutter:stable;border-color:color-mix(in srgb,var(--scene-accent,#c1c7b1) 38%,var(--scene-bg,#192321))}
+.reader.paper{--reader-bg:var(--scene-paper,#f0e8dc);--reader-fg:#28332d;--reader-muted:#4b5a50;--reader-rule:#909c8c}
+.reader-atmosphere{position:sticky;top:0;height:0;z-index:-1;pointer-events:none}
+.reader-scene{position:absolute;top:0;left:0;width:100%;height:calc(100dvh - 48px);overflow:hidden;pointer-events:none;background:var(--scene-bg)}
+.reader-scene-svg{display:block;width:100%;height:100%;pointer-events:none}
+.reader-scene-wash{position:absolute;inset:0;background:linear-gradient(90deg,color-mix(in srgb,var(--reader-bg) 96%,transparent) 0%,color-mix(in srgb,var(--reader-bg) 91%,transparent) 39%,color-mix(in srgb,var(--reader-bg) 73%,transparent) 62%,color-mix(in srgb,var(--reader-bg) 12%,transparent) 86%),linear-gradient(0deg,color-mix(in srgb,var(--reader-bg) 45%,transparent),transparent 40%);pointer-events:none}
+.reader-toolbar{background:color-mix(in srgb,var(--reader-bg) 95%,transparent);z-index:5;box-shadow:0 4px 24px #00000008}
+.reader-article{position:relative;z-index:1;padding:52px clamp(28px,6vw,76px) 36px;min-height:calc(100dvh - 122px);background:none}
+.reader h2{max-width:700px;font-size:clamp(38px,4.7vw,64px);text-wrap:balance}
+.reader-lines{max-width:650px;text-shadow:0 1px 18px color-mix(in srgb,var(--reader-bg) 70%,transparent)}
+.reader-actions,.reader-pagination{max-width:650px}
+.reader-scene-name{font-size:10px;line-height:1.8;letter-spacing:.025em;color:var(--reader-muted);margin-top:12px;max-width:500px}
+.reader-rule{background:var(--scene-accent);opacity:.8;margin-block:26px 30px}
+.reader.paper .reader-rule{background:var(--reader-muted)}
+.reader-motion-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:10px;min-height:44px;padding:0 9px;color:var(--reader-muted)}
+.reader-motion-button svg{height:18px;width:18px;stroke:currentColor;stroke-width:1.2;fill:none}
+.reader-motion-button[aria-pressed=false] svg{opacity:.5}
+.reader-motion-button:hover{background:color-mix(in srgb,var(--reader-fg) 8%,transparent);color:var(--reader-fg)}
+.reader.paper .reader-scene-svg{opacity:.34;filter:saturate(.65)}
+.reader.paper .reader-scene{background:var(--scene-paper)}
+.reader.paper .reader-scene-wash{background:linear-gradient(90deg,color-mix(in srgb,var(--reader-bg) 97%,transparent),color-mix(in srgb,var(--reader-bg) 91%,transparent) 39%,color-mix(in srgb,var(--reader-bg) 63%,transparent) 63%,color-mix(in srgb,var(--reader-bg) 6%,transparent) 90%)}
+.reader.paper .reader-lines{text-shadow:none}
+@media(max-width:900px){.reader-article{padding-inline:38px}.reader-scene-wash{background:linear-gradient(90deg,color-mix(in srgb,var(--reader-bg) 95%,transparent),color-mix(in srgb,var(--reader-bg) 86%,transparent) 55%,color-mix(in srgb,var(--reader-bg) 45%,transparent))}.reader-lines{max-width:630px}}
+@media(max-width:760px){.reader{width:calc(100% - 20px);height:calc(100dvh - 24px);max-height:calc(100dvh - 24px)}.reader-scene{height:calc(100dvh - 24px)}.reader-toolbar{padding:8px 12px}.reader-toolbar>div{gap:4px}.reader-toolbar>.small-label{font-size:9px;letter-spacing:.1em}.reader-motion-button{gap:6px;padding:0 7px;font-size:9px}.reader-motion-button svg{width:16px;height:16px}.reader-article{padding:30px 24px 26px;min-height:calc(100dvh - 90px)}.reader h2{font-size:43px;max-width:100%}.reader-scene-name{font-size:9px;line-height:1.8;max-width:280px;margin-top:10px}.reader-rule{margin-block:24px}.reader-scene-wash{background:linear-gradient(90deg,color-mix(in srgb,var(--reader-bg) 91%,transparent),color-mix(in srgb,var(--reader-bg) 85%,transparent) 51%,color-mix(in srgb,var(--reader-bg) 75%,transparent))}.reader.paper .reader-scene-svg{opacity:.28}.reader.paper .reader-scene-wash{background:linear-gradient(90deg,color-mix(in srgb,var(--reader-bg) 93%,transparent),color-mix(in srgb,var(--reader-bg) 86%,transparent) 55%,color-mix(in srgb,var(--reader-bg) 69%,transparent))}.reader-lines{font-size:22px;line-height:1.75}}
+@media(max-width:380px){.reader-article{padding-inline:19px}.reader h2{font-size:38px}.reader-lines{font-size:20px}.reader-toolbar{padding-inline:10px}.reader-motion-button{font-size:8px;padding-inline:4px}}
+@media print{.reader-atmosphere,.reader-scene-name{display:none}.reader[open]{height:auto;width:100%;max-height:none;border:0;background:white;color:black}.reader-article{min-height:0;padding:0}.reader-lines{text-shadow:none}}
