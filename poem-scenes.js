@@ -11,7 +11,11 @@
     'shab-e-chahat': { name: 'One rooftop, a thousand glances', bg: '#1b202d', sky: '#3d4765', accent: '#d8c8ae', paper: '#e9e5e2', scene: 'rooftop' },
     'radha-kanha': { name: 'A few moments in another world', bg: '#122a2b', sky: '#235351', accent: '#d5c58e', paper: '#e8ebda', scene: 'lotus' },
     'musafir': { name: 'A light beyond the dunes', bg: '#28212a', sky: '#5c4654', accent: '#e0be8f', paper: '#f0e4d1', scene: 'desert' },
-    'ek-khwais': { name: 'The story that almost wasn’t', bg: '#272525', sky: '#50494a', accent: '#d6c6b1', paper: '#eee6dc', scene: 'pages' }
+    'ek-khwais': { name: 'The story that almost wasn’t', bg: '#272525', sky: '#50494a', accent: '#d6c6b1', paper: '#eee6dc', scene: 'pages' },
+    'kuch-pal-aur': { name: 'A little longer before goodbye', bg: '#24222b', sky: '#5a4b5b', accent: '#d7b2ab', paper: '#f0e3db', scene: 'window' },
+    'adhuri-mohobatt': { name: 'What the pen could not finish', bg: '#26242a', sky: '#5d5256', accent: '#d4ad9f', paper: '#efe6dc', scene: 'pages' },
+    'mohabbat-mein-khuda': { name: 'A prayer made of longing', bg: '#1d272a', sky: '#4b6370', accent: '#ddc59d', paper: '#efe9d9', scene: 'lake' },
+    'nigaho-ka-jaam': { name: 'The gaze that changed the room', bg: '#1c2431', sky: '#4c506c', accent: '#e4bc9d', paper: '#f0e2d5', scene: 'rooftop' }
   };
 
   const path = (d, extra = '') => `<path d="${d}" ${extra}/>`;

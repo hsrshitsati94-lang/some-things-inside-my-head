@@ -20,12 +20,12 @@ Then open `http://127.0.0.1:8767`. A local web server is recommended for the mos
 
 ## Included
 
-- Nine original poems, transcribed from the author's messages without wording corrections.
+- Thirteen original poems, transcribed from the author's messages without wording corrections.
 - Mood filters, full-text search, a random poem, and saved poems stored in this browser.
 - A keyboard-accessible native dialog reader, paper/night reading backgrounds, previous/next poems, and copy.
 - Direct poem links using `#poem-koshish`, `#poem-fursat`, `#poem-aadha-adhura`, `#poem-dastaan`, `#poem-phir-se`, `#poem-shab-e-chahat`, `#poem-radha-kanha`, `#poem-musafir`, and `#poem-ek-khwais`.
 - Responsive phone/laptop layouts, a motion toggle, and respect for the device's reduced motion preference.
-- Nine individual illustrated reading backgrounds, each with an original SVG setting and GSAP motion graphics. Scenery stays anchored while long poems scroll.
+- Thirteen illustrated reading backgrounds, each with an original SVG setting and GSAP motion graphics. Scenery stays anchored while long poems scroll.
 - A pause/resume control inside the poem reader. Scene motion follows the main motion switch and the device's reduced motion preference, and stops when the tab is hidden.
 - Locally stored fonts, image, and scripts, so ordinary browsing has no external asset dependency.
 
@@ -51,7 +51,7 @@ See `THIRD_PARTY.md` for component, font, and animation notices. No paid Animast
 | Kabhi To Aaega | Desert dunes, a lone traveller, distant star, moving dust |
 | Ek Khwais | Open pages, a quill, an ink line drawing, drifting fragments |
 
-All nine scenes are project-native vector illustrations in `poem-scenes.js`, styled by `poem-scenes.css`. No new raster image generation or paid component is used for these reading backgrounds. The poems remain verbatim. Both night and paper reading modes keep a protective surface behind the text. Scene timelines are cleared when a poem closes or changes.
+All thirteen scenes are project-native vector illustrations in `poem-scenes.js`, styled by `poem-scenes.css`. No new raster image generation or paid component is used for these reading backgrounds. The poems remain verbatim. Both night and paper reading modes keep a protective surface behind the text. Scene timelines are cleared when a poem closes or changes.
 
 ## Generated background
 
